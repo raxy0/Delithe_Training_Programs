@@ -1,0 +1,20 @@
+#prime number 
+a=int(input("Enter a number: "))
+flag=False
+if(a==0):
+    print("NUMBER IS 0")
+elif(a==1):
+    print("number is 1")
+else:
+    for i in range(2, a):
+        if (a % i) == 0:
+            # if factor is found, set flag to True
+            flag = True
+            # break out of loop
+            break
+
+    # check if flag is True
+    if flag:
+        print(a, "is not a prime number")
+    else:
+        print(a, "is a prime number")
